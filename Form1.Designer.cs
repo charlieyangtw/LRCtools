@@ -33,7 +33,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.txtSource = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtTarget = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.功能ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.儲存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,8 +40,9 @@
             this.單字恢復長串ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.離開ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.關於ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.txtTarget = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -98,23 +98,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "結果";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // txtTarget
-            // 
-            this.txtTarget.AllowDrop = true;
-            this.txtTarget.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTarget.Font = new System.Drawing.Font("Source Code Pro Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTarget.Location = new System.Drawing.Point(3, 3);
-            this.txtTarget.Margin = new System.Windows.Forms.Padding(5);
-            this.txtTarget.Multiline = true;
-            this.txtTarget.Name = "txtTarget";
-            this.txtTarget.ReadOnly = true;
-            this.txtTarget.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtTarget.Size = new System.Drawing.Size(785, 409);
-            this.txtTarget.TabIndex = 3;
-            this.txtTarget.TextChanged += new System.EventHandler(this.txtTarget_TextChanged);
-            this.txtTarget.DragDrop += new System.Windows.Forms.DragEventHandler(this.txtSource_DragDrop);
-            this.txtTarget.DragEnter += new System.Windows.Forms.DragEventHandler(this.txtSource_DragEnter);
             // 
             // menuStrip1
             // 
@@ -172,18 +155,34 @@
             this.離開ToolStripMenuItem.Text = "離開";
             this.離開ToolStripMenuItem.Click += new System.EventHandler(this.離開ToolStripMenuItem_Click);
             // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.DefaultExt = "lrc";
-            this.saveFileDialog1.Filter = "LRC|*.lrc";
-            this.saveFileDialog1.RestoreDirectory = true;
-            // 
             // 關於ToolStripMenuItem
             // 
             this.關於ToolStripMenuItem.Name = "關於ToolStripMenuItem";
             this.關於ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.關於ToolStripMenuItem.Text = "關於";
             this.關於ToolStripMenuItem.Click += new System.EventHandler(this.關於ToolStripMenuItem_Click);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "lrc";
+            this.saveFileDialog1.Filter = "LRC|*.lrc";
+            this.saveFileDialog1.RestoreDirectory = true;
+            // 
+            // txtTarget
+            // 
+            this.txtTarget.AllowDrop = true;
+            this.txtTarget.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTarget.Font = new System.Drawing.Font("Source Code Pro Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTarget.Location = new System.Drawing.Point(3, 3);
+            this.txtTarget.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTarget.Multiline = true;
+            this.txtTarget.Name = "txtTarget";
+            this.txtTarget.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtTarget.Size = new System.Drawing.Size(785, 409);
+            this.txtTarget.TabIndex = 2;
+            this.txtTarget.WordWrap = false;
+            this.txtTarget.DragDrop += new System.Windows.Forms.DragEventHandler(this.txtSource_DragDrop);
+            this.txtTarget.DragEnter += new System.Windows.Forms.DragEventHandler(this.txtSource_DragEnter);
             // 
             // Form1
             // 
@@ -217,7 +216,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox txtSource;
-        private System.Windows.Forms.TextBox txtTarget;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 功能ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 單字恢復長串ToolStripMenuItem;
@@ -227,6 +225,7 @@
         private System.Windows.Forms.ToolStripMenuItem 離開ToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem 關於ToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtTarget;
     }
 }
 

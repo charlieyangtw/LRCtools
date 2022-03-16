@@ -77,13 +77,6 @@ namespace LRCtools
         }
         #endregion txtSource
 
-        #region txtTarget
-        private void txtTarget_TextChanged(object sender, EventArgs e)
-        {
-            txtTarget.SelectionLength = 0;
-        }
-        #endregion txtTarget
-
         #region 自定功能
         private void newObject()
         {
